@@ -1,0 +1,6 @@
+{% for s in sites %}
+  <article>
+    <h1><a href="{{s.href}}" title="{{s.title}}" target="_blank">{{s.title}}</a></h1>
+    <p>{{s.description}}</p>
+  </article>
+{% endfor %}

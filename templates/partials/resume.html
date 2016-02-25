@@ -1,0 +1,32 @@
+
+  {% for r in resume %}
+    <section>
+      <h2>{{r.title}}</h2>
+      {% if r.skills %}
+        <ul>
+          {% for s in r.skills %}
+            <li>{{s.i | safe}}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if r.work %}
+        <dl>
+          {% for w in r.work %}
+            <dt>Employer: </dt><dd>{{w.employer}}</dd>
+            <dt>Duration: </dt><dd>{{w.duration}}</dd>
+            <dt>Location: </dt><dd>{{w.location}}</dd>
+            <dt>Description: </dt><dd>{{w.description}}</dd>
+          {% endfor %}
+        </dl>
+      {% endif %}
+      {% if r.education %}
+        <dl>
+          {% for e in r.education %}
+            <dt>School: </dt><dd>{{e.school}}</dd>
+            <dt>Received: </dt><dd>{{e.receipt}}</dd>
+            <dt>Duration: </dt><dd>{{e.duration}}</dd>
+          {% endfor %}
+        </dl>
+      {% endif %}
+    </section>
+  {% endfor %}

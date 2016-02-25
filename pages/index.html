@@ -12,6 +12,9 @@ navigation:
       - title: 'LinkedIn'
         href: 'http://lnkd.in/r7wjg5'
         target: '_blank'
+      - title: 'GitHub'
+        href: 'https://github.com/gvorbeck'
+        target: '_blank'
       - title: 'Email'
         href: 'mailto:me@iamgarrett.com'
       - title: 'Facebook'
@@ -23,11 +26,39 @@ navigation:
       - title: 'Last.fm'
         href: 'http://www.last.fm/user/im_calm'
         target: '_blank'
+resume:
+  - title: 'skills'
+    skills:
+      - i: 'Experiencing in the latest <strong>HTML5 and CSS3</strong> concepts and practices.'
+      - i: 'Skilled with preprocessors like <strong>SASS and LESS.</strong>'
+      - i: 'Mobile-first development strategies.'
+      - i: 'Deep understanding of <strong>javascript and jQuery</strong>.'
+  - title: 'work history'
+    work:
+      - employer: 'nbcuniversal'
+        duration: '2006 - 2015'
+        location: 'New York City, NY'
+        description: 'I mostly just broke shit.'
+  - title: 'education'
+    education:
+      - school: 'New Jersey City University'
+        receipt: 'B.S. in Computer Science'
+        duration: '2006 - 2010'
+sites:
+  - title: 'Cold Blood Club'
+    href: 'coldbloodclub.com'
+    description: "My old band is still out there, filling venues and dancing their asses off while doing it. I still manage their site even though I'm no longer touring with my buddies. Check them out when they come to your home town!"
+bio:
+  - p: 'My name is Garrett Vorbeck.'
+  - p: 'I am a developer based out of NYC.'
+  - p: 'I eat pizza, listen to punk rock, and love Front-End development.'
 ---
 {% extends '_layout.html' %}
 
 {%block content %}
-<p>Pages can be written in HTML and compiled via <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>. This allows for automatically templating. HTML supports <a href="http://jekyllrb.com/docs/frontmatter/">front-matter</a>, allowing for variables to be defined and passed in to a file when compiled.
 
-<p>Pages cal also be written in <a href="/markdown">markdown</a>.</p>
+  <div class="site-resume">{% include 'partials/resume.html' %}</div>
+
+  <div class="site-sites">{% include 'partials/sites.html' %}</div>
+
 {% endblock %}
