@@ -1,0 +1,14 @@
+footer {
+  background-color: $color--gray;
+  overflow: hidden;
+  color: white;
+
+  nav {
+    background-color: $color--gray-dark;
+  }
+
+  p {
+    color: $color--gray-light;
+    font-size: em(12);
+  }
+}

@@ -1,0 +1,91 @@
+header {
+  background-color: $color--gray;
+  color: white;
+
+  h1 {
+    margin: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    font-family: $font--fancy;
+    font-size: em(50);
+    font-weight: bold;
+  }
+
+  .site-navigation-- {
+
+    &internal {
+      margin: rem(15) 0;
+    }
+
+    &external {
+      display: flex;
+
+      li {
+        width: 16.65%;
+        display: block;
+        float: left;
+
+        &:nth-child(5n+1) a {
+          background-color: $color--brown;
+        }
+
+        &:nth-child(5n+2) a {
+          background-color: $color--pink;
+        }
+
+        &:nth-child(5n+3) a {
+          background-color: $color--purple;
+        }
+
+        &:nth-child(5n+4) a {
+          background-color: $color--red;
+        }
+
+        &:nth-child(5n+5) a {
+          background-color: $color--yellow;
+        }
+      }
+
+      a {
+        text-indent: -9999px;
+        display: block;
+        width: 100%;
+        height: rem(50);
+      }
+    }
+  }
+}
+
+nav {
+  text-align: center;
+
+  li {
+    display: inline-block;
+
+    a {
+      color: white;
+
+      &:active,
+      &:visited,
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.site-logo {
+  position: relative;
+
+  &--dot {
+    background-color: $color--yellow;
+    width: rem(80);
+    height: rem(80);
+    position: absolute;
+    top: rem(-5);
+    left: 50%;
+    border-radius: 50%;
+    margin-left: rem(-60);
+  }
+}
