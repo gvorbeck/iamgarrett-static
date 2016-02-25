@@ -1,0 +1,15 @@
+<div class="site-logo">
+  <h1>{{title}}{% if subtitle %} | {{subtitle}} {% endif %}</h1>
+  <div class="site-logo--dot"></div>
+</div>
+<nav class="site-navigation" role="navigation">
+  {% for n in navigation %}
+    <ul class="site-navigation--{{n.name}}">
+      {% for l in n.links %}
+        <li>
+          <a{% if l.href %} href="{{l.href}}"{% endif %}{% if l.target %} target="{{l.target}}"{% endif %} title="{{l.title}}">{{l.title}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</nav>
