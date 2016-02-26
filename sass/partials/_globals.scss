@@ -11,13 +11,57 @@ a {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: $font--fancy;
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+dl {
+  margin: 0;
+}
+
 main {
   background-color: $color--gray-light;
   overflow: hidden;
+  padding: rem(20) rem(10);
+}
+
+.content-block {
+  background-color: white;
+  padding: rem(10);
+  margin: rem(40) 0 0;
+  border-bottom: rem(10) solid $color--yellow;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h2 {
+  color: $color--gray-dark;
+  margin-bottom: rem(20);
+  font-size: em(35);
+  border-bottom: rem(2) solid $color--gray-dark;
+}
+
+h3 {
+  margin: rem(20) 0 0;
+}
+
+section {
+
+  ul {
+    list-style: disc;
+    list-style-position: inside;
+  }
+
+  li {
+    margin: rem(10) 0;
+  }
 }

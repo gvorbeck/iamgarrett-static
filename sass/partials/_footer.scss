@@ -10,5 +10,36 @@ footer {
   p {
     color: $color--gray-light;
     font-size: em(12);
+    padding: 0 rem(10);
+  }
+
+  img {
+    width: 25%;
+    float: left;
+    margin-right: rem(10);
+  }
+
+  .site-navigation {
+    padding: rem(20) rem(10);
+
+    &--internal {
+      margin-bottom: rem(20);
+    }
+
+    &--external a {
+      line-height: rem(25);
+
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+
+.site-bio {
+  padding: rem(20) rem(10);
+
+  &--text {
+    overflow: hidden;
   }
 }

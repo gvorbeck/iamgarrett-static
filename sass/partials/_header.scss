@@ -22,7 +22,7 @@ header {
       display: flex;
 
       li {
-        width: 16.65%;
+        //width: 16.67%;
         display: block;
         float: left;
 
@@ -45,13 +45,30 @@ header {
         &:nth-child(5n+5) a {
           background-color: $color--yellow;
         }
+
+        a:active,
+        a:visited,
+        a:hover {
+          border-bottom: none;
+        }
       }
 
       a {
-        text-indent: -9999px;
         display: block;
         width: 100%;
         height: rem(50);
+        padding: rem(5);
+        box-sizing: border-box;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: white;
+      }
+
+      span {
+        display: none;
       }
     }
   }
@@ -65,11 +82,8 @@ nav {
 
     a {
       color: white;
-
-      &:active,
-      &:visited,
       &:hover {
-        border-bottom: none;
+        border-color: white;
       }
     }
   }
