@@ -8,3 +8,10 @@ $browser-context: 16; // Default
 @function rem($pixels, $context: $browser-context) {
   @return #{$pixels/$context}rem;
 }
+
+@mixin media--tablet {
+  @media only screen
+  and (min-width: $width--tablet-min) {
+    @content;
+  }
+}

@@ -2,6 +2,9 @@
   <img src="images/avatar-round.png" alt="Garrett Vorbeck" />
   <h2>Garrett Vorbeck</h2>
   <p><a href="mailto:me@iamgarrett.com">me@iamgarrett.com</a></p>
+  <div class="site-resume--etc">
+    <p>I'm a front-end developer based in NYC for the past 10 years. I love to eat pizza and listen to punk rock. I play in a skeeball league and have competed in the national championships with my team, Skeez Louise. I enjoy drawing people and reading science fiction.</p>
+  </div>
 </div>
 <div class="site-resume--content">
   {% for r in resume %}
@@ -9,7 +12,7 @@
 
     {# SKILLS #}
     {% if r.skills %}
-      <ul>
+      <ul class="site-resume--skills">
         {% for s in r.skills %}
           <li>{{s.i | safe}}</li>
         {% endfor %}
@@ -18,7 +21,7 @@
 
     {# WORK HISTORY #}
     {% for w in r.work %}
-      <dl>
+      <dl class="site-resume--work">
         <dt>Employer:</dt> <dd>{{w.employer}}</dd>
         <dt>Title:</dt> <dd>{{w.title}}</dd>
         <dt>Duration: </dt><dd>{{w.duration}}</dd>
@@ -29,7 +32,7 @@
 
     {# EDUCATION #}
     {% for e in r.education %}
-      <dl>
+      <dl class="site-resume--education">
         <dt>School: </dt><dd>{{e.school}}</dd>
         <dt>Received: </dt><dd>{{e.receipt}}</dd>
         <dt>Graduated: </dt><dd>{{e.graduation}}</dd>
@@ -37,44 +40,3 @@
     {% endfor %}
   {% endfor %}
 </div>
-<!-- <section>
-  {% if resume %}
-    <div class="sidebar">
-      <h2>Garrett Vorbeck</h2>
-    </div>
-    <div class="resume-content">
-      <h2>Résumé</h2>
-  {% endif %}
-  {% for r in resume %}
-      <h3>{{r.title | capitalize}}</h3>
-      {% if r.skills %}
-        <ul>
-          {% for s in r.skills %}
-            <li>{{s.i | safe}}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </div>
-
-    {% if r.work %}
-      <dl>
-        {% for w in r.work %}
-          <dt>Employer: </dt><dd>{{w.employer}}</dd>
-          <dt>Duration: </dt><dd>{{w.duration}}</dd>
-          <dt>Location: </dt><dd>{{w.location}}</dd>
-          <dt>Description: </dt><dd>{{w.description}}</dd>
-        {% endfor %}
-      </dl>
-    {% endif %}
-
-    {% if r.education %}
-      <dl>
-        {% for e in r.education %}
-          <dt>School: </dt><dd>{{e.school}}</dd>
-          <dt>Received: </dt><dd>{{e.receipt}}</dd>
-          <dt>Graduated: </dt><dd>{{e.graduation}}</dd>
-        {% endfor %}
-      </dl>
-    {% endif %}
-  {% endfor %}
-</section> -->
