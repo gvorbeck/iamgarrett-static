@@ -3,7 +3,10 @@
     <ul class="site-navigation--{{n.name}}">
       {% for l in n.links %}
         <li>
-          <a{% if l.href %} href="{{l.href}}"{% endif %}{% if l.target %} target="{{l.target}}"{% endif %} title="{{l.title}}">{{l.title}}</a>
+          <a{% if l.href %} href="{{l.href}}"{% endif %}{% if l.target %} target="{{l.target}}"{% endif %} title="{{l.title}}">
+            <span>{{l.title}}</span>
+            {{l.svg | safe}}
+          </a>
         </li>
       {% endfor %}
     </ul>

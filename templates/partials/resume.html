@@ -1,7 +1,7 @@
 
   {% for r in resume %}
     <section>
-      <h2>{{r.title}}</h2>
+      <h3>{{r.title | capitalize}}</h3>
       {% if r.skills %}
         <ul>
           {% for s in r.skills %}
@@ -24,7 +24,7 @@
           {% for e in r.education %}
             <dt>School: </dt><dd>{{e.school}}</dd>
             <dt>Received: </dt><dd>{{e.receipt}}</dd>
-            <dt>Duration: </dt><dd>{{e.duration}}</dd>
+            <dt>Graduated: </dt><dd>{{e.graduation}}</dd>
           {% endfor %}
         </dl>
       {% endif %}

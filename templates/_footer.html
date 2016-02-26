@@ -1,9 +1,11 @@
 <div class="site-bio">
-  <!-- GARRETT'S MUG -->
-  <h3>About Me</h3>
-  {% for b in bio %}
-    <p>{{b.p}}</p>
-  {% endfor %}
+  <img alt="Garrett" src="{{bioImage}}"/>
+  <div class="site-bio--text">
+    <h3>About Me</h3>
+    {% for b in bio %}
+      <p>{{b.p}}</p>
+    {% endfor %}
+  </div>
 </div>
 
 {% include 'partials/navigation.html' %}
