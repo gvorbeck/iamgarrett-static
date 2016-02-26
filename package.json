@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "bower": "^1.4.1",
-    "gulp": "^3.8.11",
-    "gulp-armadillo": "^2.0.1"
+    "gulp": "^3.9.1",
+    "gulp-armadillo": "^2.6.0"
   },
   "dependencies": {
     "normalize.css": "^3.0.3"
