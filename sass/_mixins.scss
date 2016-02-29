@@ -15,3 +15,10 @@ $browser-context: 16; // Default
     @content;
   }
 }
+
+@mixin media--desktop {
+  @media only screen
+  and (min-width: $width--desktop-min) {
+    @content;
+  }
+}

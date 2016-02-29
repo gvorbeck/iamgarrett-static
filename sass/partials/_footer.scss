@@ -2,25 +2,7 @@ footer {
   background-color: $color--gray-dark;
   overflow: hidden;
   color: white;
-
-  nav {
-    background-color: $color--gray;
-
-    ul {
-      display: inline-block;
-    }
-
-    li {
-      float: left;
-    }
-
-    li + li {
-      list-style: disc;
-      list-style-position: inside;
-      display: list-item;
-      margin-left: rem(13);
-    }
-  }
+  padding: rem(20) rem(10);
 
   p {
     color: $color--gray-light;
@@ -29,14 +11,16 @@ footer {
   }
 
   .site-navigation {
-    padding: rem(20) rem(10);
 
     &--internal {
-      margin-bottom: rem(20);
+      margin-bottom: rem(15);
     }
 
-    &--external a {
-      line-height: rem(25);
+    &--external {
+
+      li {
+        margin-top: rem(5);
+      }
 
       svg {
         display: none;

@@ -37,7 +37,11 @@ dl {
 main {
   background-color: $color--gray-light;
   overflow: hidden;
-  padding: rem(20) rem(10);
+  padding: 0 rem(10) rem(20);
+
+  @include media--tablet {
+    clear: both;
+  }
 }
 
 h2 {
@@ -61,19 +65,50 @@ section {
   }
 }
 
+// NAVIGATION
+.site-navigation {
+  text-align: center;
+
+  li {
+    display: inline-block;
+  }
+
+  li + li {
+    margin-left: rem(10);
+    padding-left: rem(10);
+    border-left: rem(1) solid white;
+  }
+
+  a {
+    color: white;
+
+    &:hover,
+    &:active,
+    a:visited {
+      border-bottom-color: white;
+    }
+  }
+}
+
 // CONTENT-BLOCKS
 .content-block {
-  margin: rem(40) auto 0;
+  margin: 0 auto;
   border-bottom: rem(10) solid $color--yellow;
   overflow: hidden;
   position: relative;
   max-width: rem(1000);
+  padding-top: rem(40);
 
   &:first-child {
-    margin-top: 0;
+    padding-top: rem(20);
+
+    @include media--desktop {
+      padding-top: rem($desktop-header + 20);
+    }
   }
 
   @include media--tablet {
+
     &:nth-child(even) {
       .content-block--body {
         padding-right: rem(210);

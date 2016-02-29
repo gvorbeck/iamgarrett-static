@@ -2,6 +2,13 @@ header {
   background-color: $color--gray;
   color: white;
 
+  @include media--desktop {
+    min-height: rem($desktop-header);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+
   h1 {
     margin: 0;
     text-align: center;
@@ -12,32 +19,34 @@ header {
     font-weight: bold;
   }
 
-  .site-navigation-- {
+  .site-navigation {
 
-    &internal {
+    @include media--desktop {
+      text-align: left;
+    }
+
+    &--internal {
       margin: rem(15) 0;
-      display: inline-block;
 
-      li {
+      @include media--tablet {
         float: left;
+        width: 50%;
       }
 
-      li + li {
-        list-style: disc;
-        list-style-position: inside;
-        display: list-item;
-        margin-left: rem(13);
+      @include media--desktop {
+        margin-top: rem(23);
+        width: auto;
       }
     }
 
-    &external {
+    &--external {
       display: flex;
-      clear: both;
+
+      @include media--desktop {
+        float: right;
+      }
 
       li {
-        //width: 16.67%;
-        display: block;
-        float: left;
 
         &:nth-child(5n+1) a {
           background-color: $color--brown;
@@ -66,12 +75,23 @@ header {
         }
       }
 
+      li + li {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
       a {
         display: block;
         width: 100%;
         height: rem(50);
         padding: rem(5);
         box-sizing: border-box;
+
+        @include media--desktop {
+          height: rem($desktop-header);
+          width: rem($desktop-header);
+        }
       }
 
       svg {
@@ -87,23 +107,13 @@ header {
   }
 }
 
-nav {
-  text-align: center;
-
-  li {
-    display: inline-block;
-
-    a {
-      color: white;
-      &:hover {
-        border-color: white;
-      }
-    }
-  }
-}
-
 .site-logo {
   position: relative;
+
+  @include media--desktop {
+    float: left;
+    margin: 0 rem(25) 0 rem(10);
+  }
 
   &--dot {
     background-color: $color--yellow;
@@ -114,5 +124,9 @@ nav {
     left: 50%;
     border-radius: 50%;
     margin-left: rem(-60);
+
+    @include media--tablet {
+      box-shadow: rem(5) rem(5) rgba(12, 12, 12, .25);
+    }
   }
 }
