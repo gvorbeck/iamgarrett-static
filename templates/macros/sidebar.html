@@ -1,0 +1,12 @@
+{% macro layout(section='section', image='avatar-round.png', subtitle='subtitle', link='', linkTitle='', copy='blah blah blah') %}
+  <div class="site-{{section}}--sidebar sidebar">
+    <img src="images/{{image}}" alt="{{subtitle}}" />
+    <h3>{{subtitle}}</h3>
+    <div class="site-{{section}}--etc etc">
+      {% if link %}
+        <p><a href="{{link}}">{% if linkTitle %}{{linkTitle}}{% else %}{{link}}{% endif %}</a></p>
+      {% endif %}
+      <p>{{copy}}</p>
+    </div>
+  </div>
+{% endmacro %}

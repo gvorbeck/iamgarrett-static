@@ -1,11 +1,8 @@
+{% import '../macros/sidebar.html' as sidebar %}
 <h2>Sites</h2>
-<div class="site-sites--sidebar sidebar">
-  <img src="#" alt="Sites" />
-  <h3>Freelance</h3>
-  <div class="site-sites--etc">
-    <p>Sometimes I develop projects outside of an official employer; either for myself or for a friend in need. Here are some projects I have worked on in the past.</p>
-  </div>
-</div>
+
+{{sidebar.layout('sites', '', 'Freelance', '', '', "Sometimes I develop projects outside of an official employer; either for myself or for a friend in need. Here are some projects I have worked on in the past.")}}
+
 <div class="site-sites--content content-block--body">
   {% for s in sites %}
     <article>

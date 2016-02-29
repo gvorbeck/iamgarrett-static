@@ -152,8 +152,17 @@ section {
     font-size: em(29.87);
   }
 
-  p {
-    margin: 0;
+  .etc {
+    text-align: left;
+    margin-top: rem(20);
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: rem(10);
+    }
   }
 }
 
@@ -209,16 +218,6 @@ section {
       &:last-child {
         padding-left: rem(10);
       }
-    }
-  }
-
-  &--etc {
-    text-align: left;
-    //color: white;
-    margin-top: rem(20);
-
-    p + p {
-      margin-top: rem(10);
     }
   }
 
