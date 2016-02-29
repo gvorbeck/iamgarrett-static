@@ -6,7 +6,10 @@
 <div class="site-sites--content content-block--body">
   {% for s in sites %}
     <article>
-      <h1><a href="{{s.href}}" title="{{s.title}}" target="_blank">{{s.title}}</a></h1>
+      <a class="site-sites--header pure" href="http://{{s.href}}" title="{{s.title}}" target="_blank">
+        <h1>{{s.title}}</h1>
+        <img src="images/sites-{{s.img}}" alt="{{s.title}}" />
+      </a>
       <p>{{s.description}}</p>
     </article>
   {% endfor %}

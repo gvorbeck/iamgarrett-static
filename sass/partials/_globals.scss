@@ -9,6 +9,14 @@ a {
   &:hover {
     border-bottom: rem(1) dashed $color--red;
   }
+
+  &.pure {
+    &:active,
+    &:hover,
+    &:visited {
+      border-bottom: none;
+    }
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,10 +63,11 @@ section {
 
 // CONTENT-BLOCKS
 .content-block {
-  margin: rem(40) 0 0;
+  margin: rem(40) auto 0;
   border-bottom: rem(10) solid $color--yellow;
   overflow: hidden;
   position: relative;
+  max-width: rem(1000);
 
   &:first-child {
     margin-top: 0;
@@ -74,6 +83,27 @@ section {
     &:nth-child(odd) {
       .content-block--body {
         padding-left: rem(210);
+      }
+    }
+  }
+
+  &--body {
+    background: white;
+    overflow: hidden;
+    padding: rem(10);
+
+    h4, h1 {
+      margin-bottom: rem(10);
+      background: $color--yellow;
+      padding: rem(5) rem(5) rem(3);
+      font-size: em(16);
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      a {
+        color: $color--gray-dark;
       }
     }
   }
@@ -170,19 +200,6 @@ section {
 .site-resume {
 
   &--content {
-    background: white;
-    overflow: hidden;
-    padding: rem(10);
-
-    h4 {
-      margin-bottom: rem(10);
-      background: $color--yellow;
-      padding: rem(5) rem(5) rem(3);
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
 
     ul {
       list-style: disc;
@@ -236,12 +253,34 @@ section {
 
 // SITES
 .site-sites {
+
+  &--content {
+
+    img {
+      width: 100%;
+      border: rem(1) solid $color--gray-light;
+      border-top: none;
+      box-sizing: border-box;
+    }
+  }
+
+  &--header {
+    display: block;
+
+    h1 {
+      color: black;
+      box-sizing: border-box;
+      margin: 0;
+      z-index: 1;
+    }
+  }
+
   article {
     //background-color: white;
     //padding: rem(10);
   }
 
   article + article {
-    //margin-top: rem(20);
+    margin-top: rem(40);
   }
 }
