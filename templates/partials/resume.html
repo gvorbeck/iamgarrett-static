@@ -1,6 +1,7 @@
+<h2>Résumé</h2>
 <div class="site-resume--sidebar">
   <img src="images/avatar-round.png" alt="Garrett Vorbeck" />
-  <h2>Garrett Vorbeck</h2>
+  <h3>Garrett Vorbeck</h3>
   <p><a href="mailto:me@iamgarrett.com">me@iamgarrett.com</a></p>
   <div class="site-resume--etc">
     <p>I'm a front-end developer based in NYC for the past 10 years. I love to eat pizza and listen to punk rock. I play in a skeeball league and have competed in the national championships with my team, Skeez Louise. I enjoy drawing people and reading science fiction.</p>
@@ -8,7 +9,7 @@
 </div>
 <div class="site-resume--content">
   {% for r in resume %}
-    <h3>{{r.title | capitalize}}</h3>
+    <h4>{{r.title | capitalize}}</h4>
 
     {# SKILLS #}
     {% if r.skills %}
@@ -26,7 +27,7 @@
         <dt>Title:</dt> <dd>{{w.title}}</dd>
         <dt>Duration: </dt><dd>{{w.duration}}</dd>
         <dt>Location: </dt><dd>{{w.location}}</dd>
-        <dt>Description: </dt><dd>{{w.description}}</dd>
+        <dt class="site-resume--work-description">Description: </dt><dd>{{w.description}}</dd>
       </dl>
     {% endfor %}
 
