@@ -33,7 +33,6 @@ main {
 }
 
 .content-block {
-  background-color: white;
   padding: rem(10);
   margin: rem(40) 0 0;
   border-bottom: rem(10) solid $color--yellow;
@@ -45,9 +44,7 @@ main {
 
 h2 {
   color: $color--gray-dark;
-  margin-bottom: rem(20);
   font-size: em(35);
-  border-bottom: rem(2) solid $color--gray-dark;
 }
 
 h3 {
@@ -97,7 +94,7 @@ section {
       }
     }
 
-    h2 {
+    h3 {
       color: white;
       border-bottom: none;
       font-size: em(29.87);
@@ -114,15 +111,15 @@ section {
   }
 
   &--content {
+    background: white;
     overflow: hidden;
     padding: rem(10);
-    //padding: rem(10) rem(10) rem(10) rem(210);
 
     @include media--tablet {
       padding-left: rem(210);
     }
 
-    h3 {
+    h4 {
       margin-bottom: rem(10);
       background: $color--yellow;
       padding: rem(5) rem(5) rem(3);
@@ -147,8 +144,13 @@ section {
       padding-top: rem(10);
     }
 
+    dt {
+      float: left;
+    }
+
     dd {
       font-weight: bold;
+      text-align: right;
     }
   }
 
@@ -162,7 +164,15 @@ section {
     }
   }
 
-  &--work dd:last-child {
-    font-weight: normal;
+  &--work {
+    &-description {
+      display: none;
+    }
+
+    dd:last-child {
+      font-weight: normal;
+      text-align: left;
+      margin: rem(10) 0;
+    }
   }
 }

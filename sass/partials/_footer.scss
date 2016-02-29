@@ -5,6 +5,21 @@ footer {
 
   nav {
     background-color: $color--gray;
+
+    ul {
+      display: inline-block;
+    }
+
+    li {
+      float: left;
+    }
+
+    li + li {
+      list-style: disc;
+      list-style-position: inside;
+      display: list-item;
+      margin-left: rem(13);
+    }
   }
 
   p {
