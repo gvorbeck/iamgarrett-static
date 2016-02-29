@@ -79,6 +79,8 @@ bio:
   - p: 'I eat pizza, listen to punk rock, and love Front-End development.'
 bioImage: 'images/avatar-round.png'
 ---
+<!-- TODO: Turn .sidebar into a extendable macro -->
+
 {% extends '_layout.html' %}
 
 {%block content %}
@@ -88,7 +90,6 @@ bioImage: 'images/avatar-round.png'
   </div>
 
   <div id="sites" class="site-sites content-block">
-    <h2>Sites</h2>
     {% include 'partials/sites.html' %}
   </div>
 

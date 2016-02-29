@@ -1,6 +1,16 @@
-{% for s in sites %}
-  <article>
-    <h1><a href="{{s.href}}" title="{{s.title}}" target="_blank">{{s.title}}</a></h1>
-    <p>{{s.description}}</p>
-  </article>
-{% endfor %}
+<h2>Sites</h2>
+<div class="site-sites--sidebar sidebar">
+  <img src="#" alt="Sites" />
+  <h3>Freelance</h3>
+  <div class="site-sites--etc">
+    <p>Sometimes I develop projects outside of an official employer; either for myself or for a friend in need. Here are some projects I have worked on in the past.</p>
+  </div>
+</div>
+<div class="site-sites--content content-block--body">
+  {% for s in sites %}
+    <article>
+      <h1><a href="{{s.href}}" title="{{s.title}}" target="_blank">{{s.title}}</a></h1>
+      <p>{{s.description}}</p>
+    </article>
+  {% endfor %}
+</div>
