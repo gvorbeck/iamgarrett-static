@@ -145,12 +145,24 @@ section {
     }
 
     dt {
-      float: left;
+      padding-left: rem(5);
+      margin-bottom: rem(-11);
+
+      &:nth-child(4n+1) {
+        background-color: $color--gray-light;
+      }
     }
 
     dd {
-      font-weight: bold;
+      margin: 0;
+      position: relative;
       text-align: right;
+      top: rem(-10);
+      left: rem(-5);
+
+      &:last-child {
+        padding-left: rem(10);
+      }
     }
   }
 
