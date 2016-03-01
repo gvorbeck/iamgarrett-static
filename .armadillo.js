@@ -64,7 +64,10 @@ var settings = {
       'empty': true,
       'quotes': true,
       'loose': true
-    }
+    },
+    'copy': [
+      'CNAME'
+    ]
   },
   'tasks': {
     'watch': [
