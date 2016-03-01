@@ -53,6 +53,11 @@ h3 {
   margin: rem(20) 0 0;
 }
 
+p {
+  line-height: em(24);
+  margin-top: 0;
+}
+
 section {
 
   ul {
@@ -111,13 +116,13 @@ section {
 
     &:nth-child(even) {
       .content-block--body {
-        padding-right: rem(210);
+        margin-right: rem(200);
       }
     }
 
     &:nth-child(odd) {
       .content-block--body {
-        padding-left: rem(210);
+        margin-left: rem(200);
       }
     }
   }
@@ -127,6 +132,10 @@ section {
     overflow: hidden;
     padding: rem(10);
     min-height: rem(350);
+
+    @include media--desktop {
+      padding: rem(20);
+    }
 
     h4, h1 {
       margin-bottom: rem(10);
@@ -150,6 +159,10 @@ section {
   padding: rem(10);
   box-sizing: border-box;
   font-size: em(12);
+
+  @include media--desktop {
+    padding: rem(20);
+  }
 
   .content-block:nth-child(even) & {
     right: 0;
@@ -270,6 +283,7 @@ section {
 
       &:last-child {
         padding-left: rem(10);
+        line-height: em(24);
       }
     }
   }
@@ -293,13 +307,14 @@ section {
   &--content {
 
     img {
-      width: 100%;
+      width: 90%;
       border: rem(2.5) solid #e2e1e2;
       border-top-width: rem(20);
       border-radius: rem(5) rem(5) 0 0;
-      margin-top: rem(10);
       box-sizing: border-box;
       box-shadow: rem(5) rem(5) rgba(10, 10, 10, .25);
+      margin: rem(10) auto;
+      display: block;
     }
   }
 
@@ -322,7 +337,7 @@ section {
       content: '';
       position: absolute;
       top: rem(45);
-      left: rem(5);
+      left: 7%;
       border-radius: 50%;
     }
 
@@ -359,11 +374,6 @@ section {
       margin-left: -25%;
       border-radius: rem(2.5);
     }
-  }
-
-  article {
-    //background-color: white;
-    //padding: rem(10);
   }
 
   article + article {
