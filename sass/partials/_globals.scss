@@ -293,20 +293,70 @@ section {
 
     img {
       width: 100%;
-      border: rem(1) solid $color--gray-light;
-      border-top: none;
+      border: rem(2.5) solid #e2e1e2;
+      border-top-width: rem(20);
+      border-radius: rem(5) rem(5) 0 0;
+      margin-top: rem(10);
       box-sizing: border-box;
+      box-shadow: rem(5) rem(5) rgba(10, 10, 10, .25);
     }
   }
 
   &--header {
     display: block;
+    position: relative;
 
     h1 {
       color: black;
       box-sizing: border-box;
       margin: 0;
       z-index: 1;
+    }
+
+    .dots,
+    .dots:before,
+    .dots:after {
+      width: rem(7);
+      height: rem(7);
+      content: '';
+      position: absolute;
+      top: rem(45);
+      left: rem(5);
+      border-radius: 50%;
+    }
+
+    .dots {
+      background-color: #ff4443;
+
+      &:before {
+        background-color: #ffbe00;
+        top: 0;
+        left: rem(10);
+      }
+
+      &:after {
+        background-color: #01d545;
+        top: 0;
+        left: rem(20);
+      }
+    }
+
+    .bar,
+    .bar:before,
+    .bar:after {
+      content: '';
+      position: absolute;
+      top: rem(43);
+      text-align: center;
+    }
+
+    .bar {
+      width: 50%;
+      height: rem(10);
+      background: #f3f3f3;
+      left: 50%;
+      margin-left: -25%;
+      border-radius: rem(2.5);
     }
   }
 
