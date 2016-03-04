@@ -1,6 +1,6 @@
 <nav class="site-navigation" role="navigation">
   {% for n in navigation %}
-    <ul class="site-navigation--{{n.name}}">
+    <ul class="site-navigation--{{n.name}} navigation-list">
       {% for l in n.links %}
         <li>
           <a{% if l.href %} href="{{l.href}}"{% endif %}{% if l.target %} target="{{l.target}}"{% endif %} title="{{l.title}}">

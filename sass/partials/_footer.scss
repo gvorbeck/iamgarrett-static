@@ -12,19 +12,24 @@ footer {
 
   .site-navigation {
 
-    &--internal {
-      margin-bottom: rem(15);
+    ul {
+      flex-wrap: wrap;
+      margin-bottom: rem(20);
     }
 
-    &--external {
+    a {
 
-      li {
-        margin-top: rem(5);
+      &:hover {
+        border-bottom-color: white;
       }
+    }
 
-      svg {
-        display: none;
-      }
+    svg {
+      display: none;
+    }
+
+    &--external li {
+      border: none;
     }
   }
 }
