@@ -50,12 +50,16 @@ header {
     &--external {
       height: rem(50);
 
+      @include media--desktop {
+        height: rem($desktop-header);
+      }
+
       li {
         border: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
-        height: rem(50);
+        height: 100%;
         width: 100%;
 
         &:nth-child(5n+1) {

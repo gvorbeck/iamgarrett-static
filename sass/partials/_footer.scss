@@ -12,6 +12,10 @@ footer {
 
   .site-navigation {
 
+    @include media--desktop {
+      display: none;
+    }
+
     ul {
       flex-wrap: wrap;
       margin-bottom: rem(20);
