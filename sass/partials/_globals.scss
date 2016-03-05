@@ -72,52 +72,23 @@ section {
 
 // NAVIGATION
 .site-navigation {
-  text-align: center;
+  //text-align: center;
 
   ul {
     display: flex;
     justify-content: center;
   }
 
-  li {
+  li + li {
     border-left: rem(1) solid white;
     padding-left: rem(10);
     margin-left: rem(10);
-
-    &:first-child {
-      border: none;
-      padding-left: 0;
-      margin-left: 0;
-    }
   }
 
   a {
     color: white;
   }
 }
-/*.site-navigation {
-  text-align: center;
-
-  li {
-    display: inline-block;
-  }
-
-  li + li {
-    margin-left: rem(10);
-    padding-left: rem(10);
-    border-left: rem(1) solid white;
-  }
-
-  a {
-    color: white;
-
-    &:hover,
-    &:active,
-    a:visited {
-      border-bottom-color: white;
-    }
-  }
-}*/
 
 // CONTENT-BLOCKS
 .content-block {
