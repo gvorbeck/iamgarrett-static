@@ -72,26 +72,20 @@ section {
 
 // NAVIGATION
 .site-navigation {
-  text-align: center;
 
-  li {
-    display: inline-block;
+  ul {
+    display: flex;
+    justify-content: center;
   }
 
   li + li {
-    margin-left: rem(10);
-    padding-left: rem(10);
     border-left: rem(1) solid white;
+    padding-left: rem(10);
+    margin-left: rem(10);
   }
 
   a {
     color: white;
-
-    &:hover,
-    &:active,
-    a:visited {
-      border-bottom-color: white;
-    }
   }
 }
 

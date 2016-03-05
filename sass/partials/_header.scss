@@ -7,6 +7,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1;
+    display: flex;
   }
 
   h1 {
@@ -21,87 +22,86 @@ header {
 
   .site-navigation {
 
-    @include media--desktop {
-      text-align: left;
+    @include media--tablet {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    a:hover {
+      border-bottom-color: white;
+    }
+
+    ul {
+
+      @include media--tablet {
+        flex-basis: 50%;
+      }
     }
 
     &--internal {
-      margin: rem(15) 0;
+      padding: rem(20) rem(10);
 
       @include media--tablet {
-        float: left;
-        width: 50%;
-      }
-
-      @include media--desktop {
-        margin-top: rem(23);
-        width: auto;
+        padding: 0 rem(20) 0 rem(10);
+        align-self: center;
       }
     }
 
     &--external {
-      display: flex;
+      height: rem(50);
 
       @include media--desktop {
-        float: right;
+        height: rem($desktop-header);
       }
 
       li {
+        border: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
 
-        &:nth-child(5n+1) a {
+        &:nth-child(5n+1) {
           background-color: $color--brown;
         }
 
-        &:nth-child(5n+2) a {
+        &:nth-child(5n+2) {
           background-color: $color--pink;
         }
 
-        &:nth-child(5n+3) a {
+        &:nth-child(5n+3) {
           background-color: $color--purple;
         }
 
-        &:nth-child(5n+4) a {
+        &:nth-child(5n+4) {
           background-color: $color--red;
         }
 
-        &:nth-child(5n+5) a {
+        &:nth-child(5n+5) {
           background-color: $color--yellow;
         }
-
-        a:active,
-        a:visited,
-        a:hover {
-          border-bottom: none;
-        }
-      }
-
-      li + li {
-        margin: 0;
-        padding: 0;
-        border: none;
       }
 
       a {
         display: block;
-        width: 100%;
-        height: rem(50);
+        height: 100%;
         padding: rem(5);
         box-sizing: border-box;
 
-        @include media--desktop {
-          height: rem($desktop-header);
-          width: rem($desktop-header);
+        &:hover {
+          border: none;
         }
-      }
-
-      svg {
-        width: 100%;
-        height: 100%;
-        fill: white;
       }
 
       span {
         display: none;
+      }
+
+      svg {
+        fill: white;
+        width: 100%;
+        height: 100%;
       }
     }
   }
