@@ -1,1 +1,17 @@
-<section class="portfolio"></section>
+<ul class="portfolio__inner">
+    {% for site in page.portfolio-items %}
+        <li class="portfolio__item">
+            <article class="portfolio-site">
+                <h1 class="portfolio-site__title">{{ site.title }}</h1>
+                <a class="portfolio-site__link" href="{{ site.url }}">
+                    <div class="browser-head">
+                        <div class="browser-head__dots"></div>
+                        <div class="browser-head__url"></div>
+                    </div>
+                    <img class="portfolio-site__image" src="{{ site.image }}" alt="{{ site.title }}">
+                </a>
+                <p class="portfolio-site__description">{{ site.description }}</p>
+            </article>
+        </li>
+    {% endfor %}
+</ul>
