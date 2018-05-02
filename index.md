@@ -56,4 +56,28 @@ resume-sections:
   school-name: New Jersey City University
   school-degree: B.S. in Computer Science
   school-graduation: 2010
+
+# PORTFOLIO-SECTION
+portfolio-items:
+- title: All My Books
+  url: http://allmybooks.me/
+  image: lmao.jpg
+  description: "This is my development playground and book tracker. I love to read and I love to capture data about my reading habits, so this site provides all that data while also giving me a site that allows me to really tinker with development concepts as I learn them. When I learn new concepts in web development I will often try them here first."
+- title: IBM HMC Mobile
+  url: http://ibm.biz/hmc-mobile
+  image: laffo.jpg
+  description: "When IBM's HMC platform released a new app meant to help mainframe admins manage their Z machines remotely, we needed to get the word out about all this app could handle. Here, users can learn about they no longer need to be tied to their desks in order to manage their vast systems."
+- title: I Love Music
+  url: https://gvorbeck.github.io/albums/
+  image: lol.jpg
+  description: "To be honest, I just really wanted to test out dynamic color selection. Along with my love of music and penchant for making lists, I built out this nifty little site to see what I could make. Colors are determined by album cover images and the header stereo is entirely drawn with CSS! I will one day revisit this to build out a desktop interface, I promise."
+- title: Container Pricing for IBM Z
+  url: https://ibm.biz/container-pricing-guide
+  image: haha.jpg
+  description: "This site is built out as a guide for IBM sales teams trying to set up clients on IBM Z's container pricing. The process is complex and resources are split between several places, so we created a guide that lists everything out and links to everything one would need in order to get through the process as seamlessly as possible!"
+
+# ABOUT-SECTION
+about-description:
+- p: "This site has gone through dozens of iterations in the 15+ years that I've owned this domain. At first it was the home of a musical project I worked on as a teenager, but as priorities shifted it became my professional homebase. Each time I introduce a new version of this site I hope to leverage new practices and technologies to ensure a modern experience across devices."
+- p: "Right now, this static single-page site was generated using GitHub's Jekyll tool. Markup templating is done through the Liquid template engine and fed with YAML front-matter. Styles were written using the SASS preprocessor. This site's code is housed in this GitHub repository."
 ---
