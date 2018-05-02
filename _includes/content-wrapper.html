@@ -6,6 +6,17 @@
             <h2 class="content-wrapper__subtitle">{{ include.subtitle }}</h2>
             <p class="content-wrapper__subtext">{{ include.subtext }}</p>
         </div>
-        <div class="content-wrapper__content"></div>
+        <div class="content-wrapper__content {{ include.title | slugify: 'latin' }}">
+            {% case include.title %}
+                {% when 'Résumé' %}
+                    {% include resume.html %}
+                {% when 'Portfolio' %}
+                    {% include portfolio.html %}
+                {% when 'About' %}
+                    {% include about.html %}
+                {% else %}
+                    This section is under construction :D
+            {% endcase %}
+        </div>
     </div>
 </section>

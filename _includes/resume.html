@@ -1,1 +1,42 @@
-<section class="resume"></section>
+{% for section in page.resume-sections %}
+<section class="resume__section {{ section.section-title | slugify: 'latin' }}-section">
+    <header class="{{ section.section-title | slugify: 'latin' }}-section__header">
+        <h1 class="{{ section.section-title | slugify: 'latin' }}-section__title">{{ section.section-title }}</h1>
+    </header>
+    {% case section.section-title %}
+        {% when 'Skills' %}
+            <ul class="{{ section.section-title | slugify: 'latin' }}-section__content skills-list">
+                {% for s in section.skills-list %}
+                    <li class="skills-list__item">{{ s.skill }}</li>
+                {% endfor %}
+            </ul>
+        {% when 'Work History' %}
+            <div class="{{ section.section-title | slugify: 'latin' }}-section__content">
+                {% for job in section.work-history-list %}
+                    <dl class="work-history-list">
+                        <dt class="work-history-list__term">employer</dt>
+                        <dd class="work-history-list__detail">{{ job.employer }}</dd>
+                        <dt class="work-history-list__term">title</dt>
+                        <dd class="work-history-list__detail">{{ job.title }}</dd>
+                        <dt class="work-history-list__term">duration</dt>
+                        <dd class="work-history-list__detail">{{ job.duration }}</dd>
+                        <dt class="work-history-list__term">location</dt>
+                        <dd class="work-history-list__detail">{{ job.location }}</dd>
+                        <dt class="work-history-list__term">description</dt>
+                        <dd class="work-history-list__detail">{{ job.description }}</dd>
+                    </dl>
+                {% endfor %}
+            </div>
+        {% when 'Education' %}
+            <dl class="{{ section.section-title | slugify: 'latin' }}-section__content education-list">
+                <dt class="education-list__term">school</dt>
+                <dd class="education-list__detail">{{ section.school-name }}</dd>
+                <dt class="education-list__term">degree</dt>
+                <dd class="education-list__detail">{{ section.school-degree }}</dd>
+                <dt class="education-list__term">graduated</dt>
+                <dd class="education-list__detail">{{ section.school-graduation }}</dd>
+            </dl>
+        {% else %}
+    {% endcase %}
+</section>
+{% endfor %}
