@@ -61,19 +61,19 @@ resume-sections:
 portfolio-items:
 - title: All My Books
   url: http://allmybooks.me/
-  image: lmao.jpg
+  image: portfolio-allmybooks.png
   description: "This is my development playground and book tracker. I love to read and I love to capture data about my reading habits, so this site provides all that data while also giving me a site that allows me to really tinker with development concepts as I learn them. When I learn new concepts in web development I will often try them here first."
 - title: IBM HMC Mobile
   url: http://ibm.biz/hmc-mobile
-  image: laffo.jpg
+  image: portfolio-hmcmobile.png
   description: "When IBM's HMC platform released a new app meant to help mainframe admins manage their Z machines remotely, we needed to get the word out about all this app could handle. Here, users can learn about they no longer need to be tied to their desks in order to manage their vast systems."
 - title: I Love Music
   url: https://gvorbeck.github.io/albums/
-  image: lol.jpg
+  image: portfolio-ilovemusic.png
   description: "To be honest, I just really wanted to test out dynamic color selection. Along with my love of music and penchant for making lists, I built out this nifty little site to see what I could make. Colors are determined by album cover images and the header stereo is entirely drawn with CSS! I will one day revisit this to build out a desktop interface, I promise."
 - title: Container Pricing for IBM Z
   url: https://ibm.biz/container-pricing-guide
-  image: haha.jpg
+  image: portfolio-containerpricing.png
   description: "This site is built out as a guide for IBM sales teams trying to set up clients on IBM Z's container pricing. The process is complex and resources are split between several places, so we created a guide that lists everything out and links to everything one would need in order to get through the process as seamlessly as possible!"
 
 # ABOUT-SECTION
