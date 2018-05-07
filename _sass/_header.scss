@@ -1,0 +1,66 @@
+.page__header {
+    background: $color--gray;
+    color: #FFFFFF;
+    padding: 1em 0 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+    box-shadow: $shadow-2;
+
+    a {
+        color: #FFFFFF;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3.5em;
+        position: relative;
+        z-index: 0;
+        font-weight: bold;
+
+        &:before {
+            @include pseudo;
+            width: 100px;
+            left: calc( 50% - ( 100px / 2 ) );
+            z-index: -1;
+            transform: rotate(45deg);
+            top: -7px;
+            height: 100px;
+            background: $color--yellow;
+            border-radius: 50%;
+        }
+    }
+}
+
+.header__navigation {
+    margin-top: 1.25em;
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.site-navigation {
+    margin-top: 2em;
+
+    li + li {
+        margin-left: .5em;
+        padding-left: .5em;
+        border-left: 1px solid #FFFFFF;
+    }
+}
+
+.external-navigation {
+    li {
+        text-indent: -9999px;
+        width: 20%;
+        height: 50px;
+
+        @for $i from 1 to 6 {
+            &:nth-child(5n + #{$i}) {
+                background-color: nth($color-list, $i);
+            }
+        }
+    }
+}
