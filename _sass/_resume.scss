@@ -1,0 +1,65 @@
+.resume-section {
+
+    & + & {
+        margin-top: 1em;
+    }
+
+    &__header {
+        background-color: $color--yellow;
+        padding: .25em .25em 0 .5em;
+        color: #FFFFFF;
+        margin-bottom: 1em;
+    }
+}
+
+.skills-list {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 0 .5em;
+
+    &__item + &__item{
+        margin-top: .5em;
+    }
+}
+
+.work-history-list,
+.education-list {
+    border-top: .25em solid $color--red;
+
+    &__item {
+        display: flex;
+        padding: .25em .5em;
+        justify-content: space-between;
+
+        &:nth-child(odd) {
+            background-color: $color--gray-light;
+        }
+
+        &:last-child {
+            dt {
+                display: none;
+            }
+        }
+
+        & + & {
+            margin-top: .5em;
+        }
+    }
+
+    &__term {
+        text-transform: capitalize;
+
+        &:after {
+            content: ":";
+            margin-right: 1em;
+        }
+    }
+
+    & + & {
+        margin-top: 1em;
+    }
+}
+
+.education-list:last-child dt {
+    display: block
+}
