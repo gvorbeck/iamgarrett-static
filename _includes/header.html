@@ -13,8 +13,8 @@
         <ul class="external-navigation__inner">
             {% for link in page.external-navigation-links %}
                 <li class="external-navigation__item">
-                    <a class="external-navigation__link" href="{{ link.url }}" title="{{ link.title }}">
-                        <img class="external-navigation__image" src="{{ link.image }}" alt="{{ link.title }}">
+                    <a class="external-navigation__link" href="{{ link.url }}" title="{{ link.title }}" target="_blank">
+                        {{ link.svg }}
                     </a>
                 </li>
             {% endfor %}

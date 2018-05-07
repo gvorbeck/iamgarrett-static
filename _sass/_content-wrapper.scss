@@ -1,4 +1,5 @@
 .content-wrapper {
+    border-bottom: 1em solid $color--yellow;
 
     &__title {
         margin-left: .25em;
@@ -32,6 +33,7 @@
         align-items: center;
         border-radius: 50%;
         overflow: hidden;
+        box-shadow: $shadow-1;
 
         .content-wrapper:nth-child(2) & {
             background-color: $color--red;
@@ -67,6 +69,10 @@
 
     &__content {
         padding: 1em .5em;
+
+        a {
+            color: $color--red;
+        }
     }
 
     & + & {

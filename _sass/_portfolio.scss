@@ -15,7 +15,8 @@
     }
 
     &__link {
-        border: 2px solid #E2E1E2;
+        $border: 2px solid #E2E1E2;
+        border: $border;
         border-radius: 5px 5px 0 0;
         box-sizing: border-box;
         width: 100%;
@@ -23,6 +24,10 @@
         flex-direction: column;
         margin-bottom: 1em;
         box-shadow: $shadow-1;
+
+        &:hover {
+            border-bottom: $border;
+        }
     }
 
     &__image {

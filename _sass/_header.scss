@@ -9,6 +9,14 @@
 
     a {
         color: #FFFFFF;
+        display: flex;
+        height: 100%;
+        padding: 0 .5em;
+        align-items: center;
+
+        &:hover {
+            border: none;
+        }
     }
 
     h1 {
@@ -52,8 +60,8 @@
 }
 
 .external-navigation {
+
     li {
-        text-indent: -9999px;
         width: 20%;
         height: 50px;
 
@@ -62,5 +70,11 @@
                 background-color: nth($color-list, $i);
             }
         }
+    }
+
+    svg {
+        height: 80%;
+        fill: #FFFFFF;
+        margin: 0 auto;
     }
 }

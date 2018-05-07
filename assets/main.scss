@@ -16,6 +16,10 @@ body {
 
 a {
     text-decoration: none;
+
+    &:hover {
+        border-bottom: 1px dashed;
+    }
 }
 
 strong {
@@ -27,3 +31,4 @@ strong {
 @import "content-wrapper";
 @import "resume";
 @import "portfolio";
+@import "footer";
