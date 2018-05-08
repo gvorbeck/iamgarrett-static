@@ -1,0 +1,23 @@
+<header class="page__header site-header">
+    <h1 class="site-header__title">iamgarrett</h1>
+    <nav class="site-header__navigation site-navigation">
+        <ul class="site-navigation__inner">
+            {% for link in page.site-navigation-links %}
+                <li class="site-navigation__item">
+                    <a class="site-navigation__link" href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <nav class="site-header__navigation external-navigation">
+        <ul class="external-navigation__inner">
+            {% for link in page.external-navigation-links %}
+                <li class="external-navigation__item">
+                    <a class="external-navigation__link" href="{{ link.url }}" title="{{ link.title }}" target="_blank">
+                        {{ link.svg }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

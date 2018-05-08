@@ -1,0 +1,73 @@
+.portfolio {
+
+    &__item + &__item {
+        margin-top: 1rem;
+    }
+}
+
+.portfolio-site {
+
+    &__header {
+        @extend %content-header;
+    }
+
+    &__link {
+        $border: .25rem solid #E2E1E2;
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem 1rem;
+        border: $border;
+        border-radius: 5px 5px 0 0;
+    }
+
+    &__image {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    &__description {
+        margin: 0 1rem;
+    }
+}
+
+.browser-head {
+    height: 1.25em;
+    background-color: #E2E1E2;
+
+    &__dots {
+        width: .5em;
+        height: .5em;
+        border-radius: 50%;
+        background-color: #ff4443;
+        position: relative;
+        top: 4px;
+        left: 5px;
+
+        &::before,
+        &::after {
+            @include pseudo;
+            width: .5em;
+            height: .5em;
+            border-radius: 50%;
+        }
+
+        &::before {
+            background-color: #ffbe00;
+            left: 15px;
+        }
+
+        &::after {
+            background-color: #01d545;
+            left: 30px;
+        }
+    }
+
+    &__url {
+        width: 50%;
+        height: 15px;
+        background-color: #f3f3f3;
+        margin: 0 auto;
+        position: relative;
+        top: -7px;
+    }
+}

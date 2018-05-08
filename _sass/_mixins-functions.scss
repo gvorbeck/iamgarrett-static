@@ -1,0 +1,49 @@
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin media($size) {
+  @if $size == s {
+    @media only screen and (min-width: $media__small) and (max-width: $media__medium - 1) {
+      @content;
+    }
+  }
+  @else if $size == sm {
+    @media only screen and (min-width: $media__small) and (max-width: $media__large - 1) {
+      @content;
+    }
+  }
+  @else if $size == m {
+    @media only screen and (min-width: $media__medium) and (max-width: $media__large - 1) {
+      @content;
+    }
+  }
+  @else if $size == ml {
+    @media only screen and (min-width: $media__medium) {
+      @content;
+    }
+  }
+  @else if $size == l {
+    @media only screen and (min-width: $media__large) {
+      @content;
+    }
+  }
+}
+
+@function set-dynamic-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000000; // Lighter backgorund, return dark color
+  } @else {
+    @return #FFFFFF; // Darker background, return light color
+  }
+}
+
+@function first($list) {
+  @return nth($list, 1);
+}
+
+@function last($list) {
+  @return nth($list, length($list));
+}
