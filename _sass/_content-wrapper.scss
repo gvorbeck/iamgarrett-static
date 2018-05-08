@@ -1,20 +1,35 @@
 .content-wrapper {
-    border-bottom: 1em solid $color--yellow;
+    $space: 1rem;
 
-    &__title {
-        margin-left: .25em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2.5em repeat(2, auto);
+    border-bottom: .5em solid $color--yellow;
+
+    &__title,
+    &__sidebar,
+    &__content {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        padding: 0 $space;
     }
 
-    &__container {
-        background-color: #FFFFFF;
+    &__title {
+        height: 1.25em;
     }
 
     &__sidebar {
-        padding: .5em;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        grid-column-gap: $space;
+        grid-row-gap: $space;
+        align-items: center;
+        padding: $space;
+        overflow: scroll;
+        box-shadow: $shadow-1;
 
-        /* Sidebar background colors */
+        // Sidebar background colors
         @for $i from 1 to length($color-list)+1 {
             .content-wrapper:nth-child(5n + #{$i}) & {
                 background-color: nth($color-list, $i);
@@ -24,19 +39,22 @@
     }
 
     &__image-container {
-        width: 4.75em;
-        height: 4.75em;
-        margin: 0 1em .5em 0;
-        background-color: $color--purple;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    &__image {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width: 100%;
         border-radius: 50%;
-        overflow: hidden;
-        box-shadow: $shadow-1;
+        background-color: $color--purple;
+        box-shadow: $shadow-2;
+        padding: .25em;
+        box-sizing: border-box;
 
         .content-wrapper:nth-child(2) & {
-            background-color: $color--red;
+            background-color: $color--yellow;
         }
 
         .content-wrapper:nth-child(3) & {
@@ -44,38 +62,22 @@
         }
     }
 
-    &__image {
-        width: 90%;
-        height: 90%;
-
-        .content-wrapper:first-child & {
-            margin-top: 7px;
-        }
-
-        .content-wrapper:nth-child(2) & {
-            width: 60%;
-            height: 60%;
-        }
-
-        .content-wrapper:nth-child(3) & {
-            width: 75%;
-            height: 75%;
-        }
+    &__subtitle {
+        grid-column-start: 2;
+        grid-column-end: 5;
     }
 
-    &__subtitle {
-        align-self: center;
+    &__subtext {
+        grid-column-start: 1;
+        grid-column-end: 5;
     }
 
     &__content {
-        padding: 1em .5em;
-
-        a {
-            color: $color--red;
-        }
+        background-color: #FFFFFF;
+        padding: $space;
     }
 
     & + & {
-        margin-top: 1.5em;
+        margin-top: 2em;
     }
 }

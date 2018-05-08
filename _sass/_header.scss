@@ -1,69 +1,60 @@
 .page__header {
     background: $color--gray;
     color: #FFFFFF;
-    padding: 1em 0 0;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.5em;
-    box-shadow: $shadow-2;
+    box-shadow: $shadow-3;
+}
 
-    a {
-        color: #FFFFFF;
-        display: flex;
-        height: 100%;
-        padding: 0 .5em;
-        align-items: center;
+.site-header {
+    text-align: center;
 
-        &:hover {
-            border: none;
-        }
-    }
-
-    h1 {
-        text-align: center;
+    &__title {
         font-size: 3.5em;
-        position: relative;
         z-index: 0;
-        font-weight: bold;
+        position: relative;
+        padding-top: 1.75rem;
 
         &:before {
             @include pseudo;
-            width: 100px;
-            left: calc( 50% - ( 100px / 2 ) );
-            z-index: -1;
-            transform: rotate(45deg);
-            top: -7px;
-            height: 100px;
-            background: $color--yellow;
+            width: 7rem;
+            height: 7rem;
+            background-color: $color--yellow;
             border-radius: 50%;
+            z-index: -1;
+            left: calc( 50% - ( 7rem / 2 ) );
+            top: .75rem;
         }
     }
 }
 
-.header__navigation {
-    margin-top: 1.25em;
-
-    ul {
-        display: flex;
-        justify-content: center;
-    }
+.site-navigation__inner,
+.external-navigation__inner {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
 }
 
 .site-navigation {
-    margin-top: 2em;
+    margin-top: 2.5em;
 
-    li + li {
-        margin-left: .5em;
-        padding-left: .5em;
-        border-left: 1px solid #FFFFFF;
+    &__item {
+
+
+        & + & {
+            margin-left: 1em;
+            padding-left: 1em;
+            border-left: .0625em solid #FFFFFF;
+        }
+    }
+
+    &__link {
+        color: #FFFFFF;
     }
 }
 
 .external-navigation {
 
-    li {
+    &__item {
         width: 20%;
-        height: 50px;
 
         @for $i from 1 to 6 {
             &:nth-child(5n + #{$i}) {
@@ -72,9 +63,16 @@
         }
     }
 
-    svg {
-        height: 80%;
-        fill: #FFFFFF;
-        margin: 0 auto;
+    &__link {
+        display: block;
+        padding: .5em;
+        height: 100%;
+        box-sizing: border-box;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: #FFFFFF;
+        }
     }
 }

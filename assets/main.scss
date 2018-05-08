@@ -10,8 +10,14 @@ $shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 $shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 $shadow-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
-body {
-    background: $color--gray-light;
+.page {
+    display: flex;
+    flex-direction: column;
+    background-color: $color--gray-light;
+
+    &__content {
+        margin: 2em 0;
+    }
 }
 
 a {
@@ -23,7 +29,7 @@ a {
 }
 
 strong {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 @import "extends";
@@ -32,3 +38,4 @@ strong {
 @import "resume";
 @import "portfolio";
 @import "footer";
+

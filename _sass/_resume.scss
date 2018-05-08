@@ -33,8 +33,13 @@
         }
 
         &:last-child {
+
             dt {
                 display: none;
+            }
+
+            dd {
+                text-align: left;
             }
         }
 
@@ -52,11 +57,15 @@
         }
     }
 
+    &__detail {
+        text-align: right;
+    }
+
     & + & {
         margin-top: 1em;
     }
 }
 
 .education-list:last-child dt {
-    display: block
+    display: block;
 }
