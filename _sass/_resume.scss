@@ -6,6 +6,69 @@
 
     &__content {
         padding: 0 .5rem;
+        margin-top: 0;
+    }
+}
+
+.skills-list,
+.work-history-list,
+.education-list {
+
+    &__item {
+        padding: 0 .5rem;
+
+        &:nth-child(odd) {
+            background-color: $color--gray-light;
+            padding: .5rem;
+        }
+    }
+}
+
+.work-history-list,
+.education-list {
+    border-top: .5rem solid $color--gray;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child .work-history-list__term {
+            display: none;
+        }
+    }
+
+    &__term {
+        text-transform: capitalize;
+        margin-right: .5rem;
+
+        &::after {
+            content: ':';
+        }
+    }
+
+    &__detail {
+        margin-top: 0;
+    }
+}
+
+.education-list {
+    border-top: none;
+}
+
+@include media(l) {
+    .content-wrapper {
+        padding-top: 6rem;
+    }
+}
+
+/*.resume-section {
+
+    &__header {
+        @extend %content-header;
+    }
+
+    &__content {
+        padding: 0 .5rem;
     }
 
     & + & {
@@ -54,7 +117,7 @@
     & + & {
         margin-top: 1rem;
     }
-}
+}*/
 
 .resume-section {
 

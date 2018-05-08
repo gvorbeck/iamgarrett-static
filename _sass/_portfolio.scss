@@ -22,6 +22,7 @@
 
     &__image {
         width: 100%;
+        margin-top: 0;
     }
 
     &__description {
@@ -30,12 +31,12 @@
 }
 
 .browser-head {
-    height: 1em;
+    height: 1.25em;
     background-color: #E2E1E2;
 
     &__dots {
-        width: .25em;
-        height: .25em;
+        width: .5em;
+        height: .5em;
         border-radius: 50%;
         background-color: #ff4443;
         position: relative;
@@ -45,28 +46,28 @@
         &::before,
         &::after {
             @include pseudo;
-            width: .25em;
-            height: .25em;
+            width: .5em;
+            height: .5em;
             border-radius: 50%;
         }
 
         &::before {
             background-color: #ffbe00;
-            left: 6px;
+            left: 15px;
         }
 
         &::after {
             background-color: #01d545;
-            left: 12px;
+            left: 30px;
         }
     }
 
     &__url {
         width: 50%;
-        height: 10px;
+        height: 15px;
         background-color: #f3f3f3;
         margin: 0 auto;
         position: relative;
-        top: -3px;
+        top: -7px;
     }
 }

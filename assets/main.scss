@@ -14,26 +14,28 @@ $shadow-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 $shadow-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 $shadow-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
-.page {
-    display: flex;
-    flex-direction: column;
-    background-color: $color--gray-light;
-
-    &__content {
-        margin: 2em 0;
-    }
-}
-
 a {
     text-decoration: none;
+    color: $color--red;
 
     &:hover {
         border-bottom: 1px dashed;
     }
 }
 
-strong {
-    font-weight: 700;
+.page {
+    background-color: $color--gray-light;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 62.5rem;
+        margin: 0 auto;
+
+        * + * {
+            margin-top: 1rem;
+        }
+    }
 }
 
 @import "extends";
@@ -41,5 +43,10 @@ strong {
 @import "content-wrapper";
 @import "resume";
 @import "portfolio";
+
+.about {
+    padding: 1rem;
+}
+
 @import "footer";
 
