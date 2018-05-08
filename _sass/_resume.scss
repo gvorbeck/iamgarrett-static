@@ -1,27 +1,94 @@
 .resume-section {
 
+    &__header {
+        @extend %content-header;
+    }
+
+    &__content {
+        padding: 0 .5rem;
+    }
+
     & + & {
+        margin-top: 1rem;
+    }
+}
+
+.skills-list,
+.work-history-list,
+.education-list {
+
+    &__item {
+        padding: .5rem;
+
+        &:nth-child(odd) {
+            background-color: $color--gray-light;
+        }
+    }
+}
+
+.work-history-list {
+    border-top: .5rem solid $color--red;
+}
+
+.work-history-list,
+.education-list {
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child .work-history-list__term {
+            display: none;
+        }
+    }
+
+    &__term {
+        text-transform: capitalize;
+        margin-right: .5rem;
+
+        &::after {
+            content: ':';
+        }
+    }
+
+    & + & {
+        margin-top: 1rem;
+    }
+}
+
+.resume-section {
+
+    /*& + & {
         margin-top: 1em;
     }
 
     &__header {
         @extend %content-header;
     }
+
+    &__content {
+        padding: .5rem;
+    }*/
 }
 
 .skills-list {
-    list-style-type: disc;
-    list-style-position: inside;
-    padding: 0 .5em;
+    /*list-style-type: disc;
+    list-style-position: inside;*/
+    /*padding: 0 .5em;*/
 
-    &__item + &__item{
+    /*&__item {
+        padding: .5em;
+    }*/
+
+    /*&__item + &__item{
         margin-top: .5em;
-    }
+    }*/
 }
 
+.skills-list,
 .work-history-list,
 .education-list {
-    border-top: .25em solid $color--red;
+    /*border-top: .25em solid $color--red;
 
     &__item {
         display: flex;
@@ -63,9 +130,9 @@
 
     & + & {
         margin-top: 1em;
-    }
+    }*/
 }
 
 .education-list:last-child dt {
-    display: block;
+    /*display: block;*/
 }

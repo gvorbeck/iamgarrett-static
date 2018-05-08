@@ -11,11 +11,11 @@
     &__content {
         grid-column-start: 1;
         grid-column-end: 5;
-        padding: 0 $space;
     }
 
     &__title {
         height: 1.25em;
+        padding: 0 $space;
     }
 
     &__sidebar {
@@ -27,7 +27,6 @@
         align-items: center;
         padding: $space;
         overflow: scroll;
-        box-shadow: $shadow-1;
 
         // Sidebar background colors
         @for $i from 1 to length($color-list)+1 {
@@ -36,11 +35,17 @@
                 color: set-dynamic-text-color(nth($color-list, $i));
             }
         }
-    }
 
-    &__image-container {
-        grid-column-start: 1;
-        grid-column-end: 2;
+        @include media(ml) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            display: flow-root;
+
+            .content-wrapper:nth-child(even) & {
+                grid-column-start: 4;
+                grid-column-end: 5;
+            }
+        }
     }
 
     &__image {
@@ -74,7 +79,18 @@
 
     &__content {
         background-color: #FFFFFF;
-        padding: $space;
+        padding-bottom: 1rem;
+
+        @include media(ml) {
+            grid-column-start: 2;
+            grid-column-end: 5;
+
+            .content-wrapper:nth-child(even) & {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+            }
+        }
     }
 
     & + & {
