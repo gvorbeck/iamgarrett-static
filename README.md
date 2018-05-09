@@ -1,2 +1,3 @@
 # iamgarrett-static
-A static site based on nunjucks and yaml
+My professional landing page.
+http://iamgarrett.com
