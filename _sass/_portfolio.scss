@@ -18,6 +18,10 @@
         margin: 0 1rem 1rem;
         border: $border;
         border-radius: 5px 5px 0 0;
+
+        &:hover {
+            border-bottom: $border;
+        }
     }
 
     &__image {
