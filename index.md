@@ -77,8 +77,8 @@ portfolio-items:
   image: portfolio-ilovemusic.png
   description: "To be honest, I just really wanted to test out dynamic color selection. Along with my love of music and penchant for making lists, I built out this nifty little site to see what I could make. Colors are determined by album cover images and the header stereo is entirely drawn with CSS! I will one day revisit this to build out a desktop interface, I promise."
 - title: Container Pricing for IBM Z
-  url: https://ibm.biz/container-pricing-guide
-  image: portfolio-containerpricing.png
+  url: https://gvorbeck.github.io/container-pricing/
+  image: portfolio-container.png
   description: "This site is built out as a guide for IBM sales teams trying to set up clients on IBM Z's container pricing. The process is complex and resources are split between several places, so we created a guide that lists everything out and links to everything one would need in order to get through the process as seamlessly as possible!"
 
 # ABOUT-SECTION
