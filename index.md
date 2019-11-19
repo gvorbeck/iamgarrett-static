@@ -34,11 +34,11 @@ external-navigation-links:
 resume-sections:
 - section-title: Skills
   skills-list:
-  - skill: "Experienced in the latest <strong>HTML5/CSS3</strong> concepts and practices."
+  - skill: "Experienced in the latest <strong>HTML/CSS/Javascript</strong> concepts and practices."
   - skill: "Skilled with preprocessors like <strong>SASS, LESS, and Stylus</strong>."
-  - skill: "Follows <strong>mobile-first development</strong> strategies to ensure a future-proof experience."
-  - skill: "Deep understanding of <strong>javascript, jQuery</strong>, and various libraries."
-  - skill: "CMS and database experience with <strong>WordPress, Drupal, and Jekyll</strong>."
+  - skill: "Follows <strong>mobile-first development</strong> strategies to ensure a modern user experience."
+  - skill: "Deep understanding of <strong>javascript, jQuery, React, D3</strong>, and other various libraries."
+  - skill: "CMS and database experience with <strong>WordPress, Drupal, Jekyll, and GatsbyJS</strong>."
   - skill: "<strong>Agile Project Management</strong> based for creative adaptation to the rigors of project turbulence."
 - section-title: Work History
   work-history-list:
@@ -72,10 +72,10 @@ portfolio-items:
   url: http://ibm.biz/hmc-mobile
   image: portfolio-hmcmobile.png
   description: "When IBM's HMC platform released a new app meant to help mainframe admins manage their Z machines remotely, we needed to get the word out about all this app could handle. Here, users can learn about they no longer need to be tied to their desks in order to manage their vast systems."
-- title: I Love Music
-  url: https://gvorbeck.github.io/albums/
+- title: Opinions on Music
+  url: https://music.iamgarrett.com
   image: portfolio-ilovemusic.png
-  description: "To be honest, I just really wanted to test out dynamic color selection. Along with my love of music and penchant for making lists, I built out this nifty little site to see what I could make. Colors are determined by album cover images and the header stereo is entirely drawn with CSS! I will one day revisit this to build out a desktop interface, I promise."
+  description: "I have for most of my life made lists of my favorite records released each year. I don't pretend to be an authority on What Is Good, but with my love of music and penchant for making lists, I built out this nifty little site to keep track of it all."
 - title: Container Pricing for IBM Z
   url: https://gvorbeck.github.io/container-pricing/
   image: portfolio-container.png
